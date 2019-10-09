@@ -8,12 +8,10 @@ import CityData from './components/CityData'
 function App() {
   return (
     <Router>
-    <Switch>
     <Route
     path="/:columnName"
     render={(props) => <CityData {...props} />}
     />
-    </Switch>
     </Router>
   );
 }

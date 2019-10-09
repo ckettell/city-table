@@ -29,6 +29,8 @@ After some research, I found I needed column names. To do this, I mapped through
 
 With this function, I was able to form the table.
 
+To pass the relevant parameters, I used React Router Dom. This is something I have used in the past and am familiar with.
+
 ## To improve on
 
 I did not have time to parse the relevant columns to integers. This means that the columns do have a funny ordering. This is something I am going to look into later instead of hardcoding them in as integers
