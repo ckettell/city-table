@@ -25,9 +25,7 @@ From here, I passed the data to my table component.
 
 Here, I used React Table. This was the most popular of all the options. Along with the high number of downloads, the GitHub issues are relatively low.
 
-After some research, I found I needed column names. To do this, I mapped through the data passed down from CityData.
-
-Alternatively, I could have used Object.keys here. 
+After some research, I found I needed column names. To do this, I mapped through the data passed down from CityData. Alternatively, I could have used Object.keys here. 
 
 With this function, I was able to form the table.
 
