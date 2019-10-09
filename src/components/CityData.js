@@ -15,19 +15,17 @@ class CityData extends Component {
   componentDidMount = () => {
     csv(data)
     .then(cities => this.setState({ cityData: cities}))
-    .then(() => console.log(this.state.cityData))
     .then(() => this.setState({ renderTable: true}))
   }
 
   render(){
 
+    const chosenColumn  = this.props.match.params
+
     let table
 
     if(this.state.renderTable){
-      console.log(this.state.renderTable);
-      console.log('hi');
-      table = <Table  data={this.state.cityData}/>
-      console.log(this.state.cityData);
+      table = <Table  data={this.state.cityData} params={chosenColumn}/>
     }
 
     return (

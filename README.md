@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cities Task
 
-## Available Scripts
+# How to start
 
-In the project directory, you can run:
+Clone this repository
 
-### `npm start`
+npm install
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm start
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+In your browser, visit http://localhost:3000/City
 
-### `npm test`
+You can change the URL to sort by country or city. Simply add:
+Country
+100m+
+150m+
+200m+
+300m+
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# How I built it
 
-### `npm run build`
+To import the CSV file I used d3. I decided on this instead of PapaParse after researching the two.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+From here, I passed the data to my table component.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Here, I used React Table. This was the most popular of all the options. Along with the high number of downloads, the GitHub issues are relatively low.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After some research, I found I needed column names. To do this, I mapped through the data passed down from CityData.
 
-### `npm run eject`
+Alternatively, I could have used Object.keys here. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+With this function, I was able to form the table.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# To improve on
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+I did not have time to parse the relevant columns to integers. This means that the columns do have a funny ordering. This is something I am going to look into later instead of hardcoding them in as integers
