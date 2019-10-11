@@ -19,6 +19,10 @@ class Table extends Component {
 
   }
 
+  componentDidMount(){
+    this.parseDataToInteger()
+  }
+
   setColumns = () => {
     const columns = []
     const amendColumns = this.props.data.columns;
@@ -32,6 +36,22 @@ class Table extends Component {
   return columns
   }
 
+  parseDataToInteger = () => {
+
+  const citiesData = this.props.data
+
+  const parsedData = []
+
+  citiesData.map(city => {
+    const relevantStringsToIntegers = {}
+      Object.keys(city).map(function(key){
+        relevantStringsToIntegers[key] = parseInt(city[key].replace(/\,/g,''), 10) || city[key]
+      })
+    parsedData.push(relevantStringsToIntegers)
+  })
+    return parsedData
+  }
+
 
   render(){
 
@@ -41,12 +61,12 @@ class Table extends Component {
     <div>
     <ReactTable
     columns={this.setColumns()}
-    data={this.props.data}
+    data={this.parseDataToInteger()}
     filterable
     defaultSorted={[
       {
         id: chosenColumn,
-        desc: false
+        desc: true
         }
       ]}
     />
