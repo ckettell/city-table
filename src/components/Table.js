@@ -46,6 +46,7 @@ class Table extends Component {
     const relevantStringsToIntegers = {}
       Object.keys(city).map(function(key){
         relevantStringsToIntegers[key] = parseInt(city[key].replace(/\,/g,''), 10) || city[key]
+        console.log(relevantStringsToIntegers[key]);
       })
     parsedData.push(relevantStringsToIntegers)
   })

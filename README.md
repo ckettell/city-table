@@ -31,6 +31,8 @@ With this function, I was able to form the table.
 
 To pass the relevant parameters, I used React Router Dom. This is something I have used in the past and am familiar with.
 
+A little later on, I was able to introduce a function parsing relevant data to integers. Found in the Table component, this iterates over the array of cities and then uses Object keys. On each iteration over the objects, it parses the relevant data to integers. 
+
 ## To improve on
 
-I did not have time to parse the relevant columns to integers. This means that the columns do have a funny ordering. This is something I am going to look into later instead of hardcoding them in as integers
+I would like to introduce tests.
